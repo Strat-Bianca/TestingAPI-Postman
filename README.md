@@ -1,15 +1,14 @@
-# # TestingAPI-Postman
 # Testing API with Postman
 
-You need to read the API documentation. We're using Simple Books API whose documentation can be found in the resources section of this link: 
+You need to read the API documentation. 
 
-https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md
+We're using Simple Books API whose documentation can be found in the resources section of this link: https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md
+
+# Endpoints
 
 GET Method - get some data/request;
 
 The API: https://simple-books-api.glitch.me
-
- # Endpoints
 
 
 ## List of books ##
@@ -24,13 +23,15 @@ Returns a list of books.
   
 I also create a variable for the URL link.
 
+Status 200 - standard response for successful HTTP requests.
+
 ![GET list of books (2)](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/b082479e-f322-47fe-b118-4e01d07d2d67)
 
 
 ## Get a single book ##
 GET /books/:bookId
 
-Retrieve detailed information about a book with a specific Id.
+Retrieve detailed information about a book with a specific Id. (bookId = 3)
 
 
 ![GET a single book](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/eafbb0ca-7588-4e3f-9c46-cd125a91caa7)
@@ -38,14 +39,15 @@ Retrieve detailed information about a book with a specific Id.
 ## Submit an order ##
 POST /orders
 
-Allows you to submit a new order. 
+Allows you to submit a new order, we are sending some data. 
 
-Requires authentication.--- Authorization: Bearer <YOUR TOKEN>
+Requires authentication. 
+Authorization: Bearer <YOUR TOKEN> we register ourself with an API client.
 
 The request body needs to be in JSON format and include the following properties:
 
-- bookId - Integer - Required
-- customerName - String - Required
+- bookId - Integer - (Required)
+- customerName - String - (Required)
   
  The response body will contain the order Id.
 
@@ -72,10 +74,28 @@ Update an existing order. Requires authentication.
 
 The request body needs to be in JSON format and allows you to update the following properties:
 
-customerName - String
+- customerName - String
 
 ![PATCH update-order](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/49efc6ba-e0aa-45e8-89b0-dacf40713290)
 
+## Delete an order ##
+DELETE /orders/:orderId
+
+Delete an existing order. Requires authentication. --- Authorization: Bearer <YOUR TOKEN>
+
+The request body needs to be empty.
+
+
+
+## API Authentication ##
+To submit or view an order, you need to register your API client.
+
+POST /api-clients/
+
+The request body needs to be in JSON format and include the following properties:
+
+clientName - "Postman"
+clientEmail - "strat.bianca@yahoo.com"
 
 ![POST register API client](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/6d26d22b-c170-4ab8-a329-c8341cc3f1f6)
 
