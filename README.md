@@ -11,7 +11,7 @@ GET Method - get some data/request;
 The API: https://simple-books-api.glitch.me
 
 
-## 1. List of books ## GET
+## 1. List of books ## 
 
 GET /books
 
@@ -28,7 +28,7 @@ Status 200 - standard response for successful HTTP requests.
 ![GET list of books (2)](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/b082479e-f322-47fe-b118-4e01d07d2d67)
 
 
-## 2. Get a single book ## GET
+## 2. Get a single book ## 
 GET /books/:bookId
 
 Retrieve detailed information about a book with a specific Id. (bookId = 3)
@@ -38,7 +38,7 @@ Status 200 - standard response for successful HTTP requests.
 
 ![GET a single book](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/eafbb0ca-7588-4e3f-9c46-cd125a91caa7)
 
-## 3. Submit an order ## POST
+## 3. Submit an order ## 
 POST /orders
 
 We identify a book that we want to order, allows you to submit a new order, we are sending some data. 
@@ -57,7 +57,7 @@ The request body needs to be in JSON format and include the following properties
 
 ![POST order a book](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/3199d6bc-28da-4885-b4ed-b7cf8c13ab1d)
 
-## 4. Get all orders ## GET
+## 4. Get all orders ## 
 GET /orders 
 
 Allows you to view all orders. Requires authentication.
@@ -67,7 +67,7 @@ Status 200 - standard response for successful HTTP requests.
 
 ![GET all books order](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/b1e5649d-02b6-493d-b7d8-40c9dd4e5dc4)
 
-## 5. Get an order ##  GET
+## 5. Get an order ##  
 GET /orders/:orderId
 
 Allows you to view an existing order. Requires authentication.
@@ -76,7 +76,7 @@ Status 200 - standard response for successful HTTP requests.
 
 ![GET an order](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/e07bcb2b-42cc-4642-836e-a916515fbb44)
 
-## 6. Update an order ## PATCH
+## 6. Update an order ## 
 PATCH /orders/:orderId
 
 Update an existing order. Requires authentication.
@@ -90,7 +90,7 @@ Status 204 - the server successfully performs the requested action, but there is
 ![PATCH](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/2e76842f-d7ba-4121-a12a-fc39090a5ef3)
 
 
-## 7. Delete an order ## DELETE
+## 7. Delete an order ## 
 DELETE /orders/:orderId
 
 DELETE method to remove a specific book from the collection by sending a DELETE request to the API endpoint representing that book.
@@ -103,7 +103,7 @@ The request body needs to be empty.
 ![PATCH update-order](https://github.com/Strat-Bianca/TestingAPI-Postman/assets/119669189/49efc6ba-e0aa-45e8-89b0-dacf40713290)
 
 
-## 8. API Authentication ## POST
+## 8. API Authentication ## 
 To submit or view an order, you need to register your API client.
 
 POST /api-clients/
